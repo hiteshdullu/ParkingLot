@@ -1,0 +1,6 @@
+# IntelliJ IDEA project files
+.idea/
+
+# Python bytecode and cache files
+__pycache__/
+*.pyc

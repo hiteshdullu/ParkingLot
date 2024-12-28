@@ -10,6 +10,7 @@ class ParkingService:
         self.reservations = {}
         for i in range(no_of_levels):
             self.levels[i] = ParkingLevel(i)
+            self.levels[i].show_spots()
 
     def register_vehicle(self, vehicle: Vehicle):
         self.vehicles[vehicle.registration_number] = vehicle
@@ -31,7 +32,9 @@ class ParkingService:
         return None
     def un_park_vehicle(self):
         pass
+
     def generate_ticket(self):
         pass
+
     def payment(self):
         pass
