@@ -6,7 +6,7 @@ class ParkingLevel:
         self.level_id = level_id
         self.full: bool = False
         self.parking_spots = {}
-
+        self.occupied = 0
         for i in range(10):
             self.parking_spots[i] = ParkingSpot(spot_id=i, size=random.randint(1,2))
 
@@ -18,3 +18,6 @@ class ParkingLevel:
 
     def is_full(self):
         return self.full
+
+    def set_full(self, value):
+        self.full = value
