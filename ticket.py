@@ -1,5 +1,7 @@
 from datetime import datetime
 import math
+from time import strftime
+
 
 class Ticket:
     def __init__(self, ticket_id, vehicle_id):
@@ -19,3 +21,8 @@ class Ticket:
 
     def get_vehicle_details(self):
         return self.vehicle_id
+
+    def print_ticket(self):
+        print(f"Ticket ID: {self.ticket_id}" )
+        print(f"Vehicle ID {self.vehicle_id}")
+        print(f"Time In: {self.time_in.strftime("%d:%m:%Y-%H:%M")}")

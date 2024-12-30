@@ -51,4 +51,3 @@ class ParkingService:
         cost = ticket.calculate_fare(datetime.now())
         del self.reservations[ticket_id]
         return cost
-

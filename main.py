@@ -47,10 +47,9 @@ class Main:
         print(f"Cost for parking {self.service.vehicles[vehicle_id].registration_number}: {cost}")
 
     def get_ticket_details(self):
-        pass
-
-    def check_available_spots(self):
-        pass
+        ticket_id = input("Enter Ticket Details: ")
+        retrieved_ticket = self.service.reservations[ticket_id]
+        retrieved_ticket.print_ticket()
 
 # Start the parking service by creating an instance of Main
 main = Main()
