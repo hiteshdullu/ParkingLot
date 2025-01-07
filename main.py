@@ -9,7 +9,7 @@ class Main:
         self.service = ParkingService(no_of_levels=2)
     def start_service(self):
         while True:
-            print("Welcome to Hitesh Parking Garage")
+            print("Welcome to Parking Garage")
             print("1: Park Vehicle \n2: Un Park vehicle \n3: Get Ticket Details\n4: End")
             incoming_car = input("Enter your action (or 'End' to quit): ")
 
@@ -50,6 +50,9 @@ class Main:
         ticket_id = input("Enter Ticket Details: ")
         retrieved_ticket = self.service.reservations[ticket_id]
         retrieved_ticket.print_ticket()
+
+    def check_available_spots(self):
+        pass
 
 # Start the parking service by creating an instance of Main
 main = Main()
